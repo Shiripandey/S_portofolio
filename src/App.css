@@ -1,0 +1,164 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+/* font-family: 'Roboto', sans-serif;
+   font-family: "Space Grotesk", sans-serif;
+*/
+
+/*// <weight>: Use a value from 300 to 700*/
+
+/* reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-bg:#efecf388;
+    --bigtitles: #131212;
+    --app-bg: #111010;
+    --violet: #6019b1;
+    --light-violet:#9845cf;
+    --light-green: #00ba41;
+    --gradient-subtitle: linear-gradient(90deg, rgba(87,208,56,1) 10%, rgba(0,212,255,1) 100%);
+    --green:#1ec51e;
+    --asparagus: #87B37A;
+    --xanadu: #77867F;
+    --dark-theme-vio:#9c44d7;
+    --helio-gray: #B4AAC5;
+    --white-bg:#f0ebeb;
+    --golden: #e6990a;
+    --pink:#fd4592;
+    --body-bg: #fbfbfb;
+    --dark-theme: #0f0e0f;
+    --red:#ca1a1a;
+    --alternate-bg:white;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    width:100vw;
+    background: var(--body-bg);
+    cursor: url('assets/cursor.png'),auto;
+}
+
+/* default styling for the headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk",sans-serif;
+}
+/* default for other texts */
+p,li,a{
+    font-family: 'Roboto',sans-serif;
+}
+
+/* For the App div  */
+.App {
+    text-align: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #111010;
+    position: relative;
+    /* z-index: -200; */
+}
+
+#light {
+    background: var(--body-bg);
+}
+
+#dark {
+    background: var(--dark-theme);
+}
+
+.underline {
+    height: 5px;
+    width: 10rem;
+    border-radius: 1rem;
+    margin: 0.2rem auto;
+    background: #339ab9af;
+}
+
+/* highlighting headings */
+.heading-highlight{
+    color:var(--violet);
+}
+
+/* highlighting headings dark theme */
+#dark .heading-highlight{
+    color:var(--dark-theme-vio);
+}
+
+/* heading styles */
+.component-headings{
+    font-size: 3.4rem;
+    padding: 1rem;
+    transform:translateX(30%) scale(0.6);
+    opacity:0;
+}
+.component-headings.show{
+    transition:all 800ms;
+    transform: translateX(0) scale(1);
+    opacity:1;
+}
+/* heading styles for light theme */
+.component-headings{
+    color:var(--bigtitles);
+}
+/* heading styles for dark theme */
+#dark .component-headings{
+    color:var(--helio-gray);
+
+}
+/* background for components in dark mode*/
+/* #dark .form-container, 
+#dark .project-wrapper,
+#dark .skills-wrapper,
+#dark .about-wrapper,
+#dark .stack,
+#dark .achievements-wrapper,
+#dark .testimonials-wrapper{
+    background: var(--dark-theme);
+} */
+@media screen and (max-width:800px){
+    .underline{
+        height:4px;
+    }
+    .component-headings{
+        font-size: 2.4rem;
+    }
+}
+@media screen and (max-width:500px){
+    .underline{
+        height:3px;
+    }
+
+    .component-headings{
+        font-size: 2rem;
+        /* text-shadow: 1px 1px 2px grey; */
+    }
+
+    
+}   
+
+/* .about-wrapper .show{
+    transform:translateX(0);
+} */

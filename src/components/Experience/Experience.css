@@ -1,0 +1,36 @@
+.experience-wrapper{
+    min-height:100vh;
+    width:100%;
+}
+/* list wrapper css .show class is in Achievements css */
+.list-wrapper ul{
+    text-align: left;
+    padding:0.8rem;
+}
+.list-wrapper ul li{padding-left: 1rem;}
+.list-wrapper ul>li::marker{
+    content: '◽';
+}
+.list-wrapper ul>li>li::marker {
+    content: '▫️';
+}
+.list-wrapper .position{
+    font-weight: 800;
+}
+.list-wrapper .organisation{
+    margin:0.8rem 0;
+    font-style: oblique;
+}
+.org-underline{
+    height: 3px;
+    width: 0;
+    /* background-color: var(--gradient-subtitle);
+    */
+    background: var(--gradient-subtitle);
+    animation: lineMove ease 2900ms infinite alternate-reverse; 
+}
+@keyframes lineMove {
+   to{
+        width: 8rem;
+    }
+}

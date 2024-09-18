@@ -1,0 +1,122 @@
+.skills-wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 1rem; /* Optional: Add padding for spacing */
+}
+
+.title-container {
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Optional: Limit the width to prevent stretching */
+    width: 100%;
+}
+
+.Card {
+    margin: 1rem;
+    height: 21rem;
+    width: 21rem;
+    padding: 0.5rem;
+    display: grid;
+    border-radius: 0.8rem;
+    text-align: center;
+    transform: scale(0.3);
+    opacity: 0;
+    box-shadow: 0 0 3px var(--white-bg);
+    color: var(--helio-gray);
+    transition: all 800ms;
+}
+
+.Card:hover {
+    box-shadow: 0 0 0 10px var(--helio-gray);
+}
+
+.Card.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.Card-inner h3 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.Card-inner p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.5rem auto;
+    text-align: center;
+    padding: 0.5rem 5%;
+}
+
+.skills-images img {
+    height: 11rem;
+    width: 11rem;
+    object-fit: cover;
+}
+
+/* Medium screens */
+@media screen and (max-width: 800px) {
+    .title-container h2 {
+        font-size: 2.4rem;
+    }
+
+    .Card {
+        height: 20.5rem;
+        width: 20rem;
+    }
+
+    .Card-inner h3 {
+        margin: 7px 1rem;
+        padding: 8px;
+    }
+
+    .Card-inner p {
+        font-size: 1.156rem;
+    }
+
+    .skills-images img {
+        height: 9rem;
+        width: 9rem;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 500px) {
+    .title-container h2 {
+        font-size: 2.1rem;
+    }
+
+    .Card {
+        height: 18rem;
+        width: 18rem;
+        margin: 0;
+    }
+
+    .Card-inner h3 {
+        font-size: 1.2rem;
+    }
+
+    .Card-inner p {
+        font-size: 1.025rem;
+    }
+
+    .skills-images img {
+        height: 10rem;
+        width: 10rem;
+        object-fit: cover;
+    }
+}

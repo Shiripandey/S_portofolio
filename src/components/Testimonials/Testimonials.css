@@ -1,0 +1,126 @@
+.testimonials-wrapper{
+    min-height: 100vh;
+    width:100vw;
+    position: relative;
+}
+.testimonial-carousel{
+    min-height: fit-content;
+    padding: 10rem;
+}
+.testimonial-box{
+    height: max-content;
+    border-radius: 0.5rem;
+    padding:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#dark .testimonial-box{
+    background:transparent;
+
+}
+.testimonial-box img{
+    height: 12rem;
+    width: 12rem;
+    border:1px solid black;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+.testimonial-box p,.testimonial-box a{
+    font-size: 1.5rem;
+}
+.testimonial-box .name, .testimonial-box .position{
+    font-weight: 600;
+    color:var(--violet);
+}
+.testimonial-box .txt{
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1rem auto;
+    color:var(--helio-gray);
+}
+/* social link */
+.testimonial-box .social svg{
+    margin: 1rem auto;
+}
+/* quotation icons */
+#quote-icon1, #quote-icon2{
+    color: var(--helio-gray);
+    font-size: 5rem;
+    position: absolute;
+    z-index: 0;
+    top:35%; 
+    left:15%;
+}
+#quote-icon2{
+    top:70%;
+    right:-50%;
+}
+
+/* slick custom class */
+.slick-arrow{
+    height: 3rem !important;
+    width: 3rem !important;
+    background-color: var(--violet) !important;
+}
+#light .slick-arrow{
+    background-color: var(--violet) !important;
+}
+#dark .slick-arrow{
+    background-color: var(--light-violet) !important;
+}
+.slick-prev{
+   left:-82px !important;
+}
+.slick-next{
+    right: -82px !important;
+}
+@media screen and (max-width:800px){
+    .testimonial-box p,.testimonial-box a{
+        font-size: 1.1rem;
+    }
+    #quote-icon1, #quote-icon2{
+        font-size: 2.5rem;
+    }
+    .testimonial-box .txt{
+        font-size: 1.4rem;
+    }
+    #quote-icon1, #quote-icon2{
+        top:40%; 
+        left:15%;
+    }
+    #quote-icon2{
+        top:75%;
+        right:-50%;
+    }
+}
+@media screen and (max-width:540px){
+
+    .testimonial-carousel{
+        padding:1rem;
+    }
+    .testimonial-box img{
+        height: 8rem;
+        width: 8rem;
+    }
+    .testimonial-box p,.testimonial-box a{
+        font-size: 1.1rem;
+    }
+    #quote-icon1, #quote-icon2{
+        font-size: 2rem;
+    }
+    #quote-icon1{
+        top:30%;
+    }
+    #quote-icon2{
+        top:60%;
+        right:-65%;
+    }
+    .testimonial-box .txt{
+        font-size: 1.1rem;
+    }
+    
+}
+
+
