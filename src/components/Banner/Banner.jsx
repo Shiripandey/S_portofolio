@@ -13,7 +13,7 @@ const Banner = () => {
       strings: [
         "Welcome to my portfolio website",
         "a self-taught developer",
-        "I build web and mobile apps",
+        "I build web applications ",
       ],
       typeSpeed: 60,
       backSpeed: 28,
